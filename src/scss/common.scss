@@ -1,0 +1,29 @@
+// Заголовки, общие БЄМ блоки и проче...
+.title {
+ @include adaptiveValue("font-size", 35, 20);
+ line-height: math.div(42, 35);
+ @include adaptiveValue("margin-bottom", 60, 40);
+ color: $mainColor;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+.text {
+ @include adaptiveValue("font-size", 20, 16);
+ line-height: math.div(30, 20);
+ color: $mainColor;
+}
+
+.btn {
+ @include adaptiveValue("font-size", 22, 18);
+ line-height: math.div(27, 22);
+ color: $primaryColor;
+ background: $btnColor;
+ padding: rem(13) rem(95);
+ border-radius: rem(10);
+ transition: all 0.7s;
+ &:hover {
+  color: rgb(45, 212, 191);
+  background: $primaryColor;
+ }
+}
